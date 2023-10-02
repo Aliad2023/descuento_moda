@@ -1,5 +1,3 @@
-@import url(normalize.min.css);
-
 /*******************
  Box Sizing
  *******************/
@@ -166,4 +164,13 @@ noscript {
   clip: rect(0 0 0 0);
   overflow: hidden;
   white-space: nowrap;
+}
+
+/* Reducir al mínimo las alturas de los textos */
+h1,
+h2,
+h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }

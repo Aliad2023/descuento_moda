@@ -1,4 +1,8 @@
 /* *********************************** */
+@import url(normalize.min.css);
+@import url(reset.css);
+
+/* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
 
@@ -31,8 +35,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* Escritorio */
+  @media only screen and (min-width: 1000px) {
+    display: block;
+    height: 700px;
+  }
+
   /* Figure */
-  & .main__imagenFondo {
+  & .header__imagenFondo {
     display: flex;
     align-items: end;
 
@@ -44,6 +55,15 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* Escritorio */
+    @media only screen and (min-width: 1000px) {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
     /* Retina Display */
     /* Móvil */
     @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
@@ -62,7 +82,7 @@ header {
 
     /* Escritorio */
     @media only screen and (min-width: 1000px) {
-      height: 400px; /* Altura común para ambos casos */
+      /* Altura común para ambos casos */
       background-image: url(../img/desktop/D_bannerDescuento.webp);
       @media (-webkit-max-device-pixel-ratio: 2) {
         background-image: url(../img/desktop/D_bannerDescuento@2x.webp);
@@ -70,7 +90,7 @@ header {
     }
 
     /* Figcaption */
-    & .main__texto {
+    & .header__texto {
       width: 100%;
       height: 50%;
       padding: 0 20px;
@@ -81,28 +101,57 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
-      & .main__titulo {
+
+      /* Escritorio */
+      @media only screen and (min-width: 1000px) {
+        align-items: start;
+      }
+
+      & .header__titulo {
         font-size: 77.6px;
+        @media screen and (min-width: 1000px) {
+          font-size: 188.994px;
+        }
         font-weight: 400;
       }
-      & .main__descuento {
+      & .header__descuento {
         font-size: 35px;
+        @media screen and (min-width: 1000px) {
+          font-size: 85.242px;
+        }
         font-weight: 400;
+        text-align: center;
       }
-      & .main__tiendas {
+      & .header__tiendas {
         font-size: 20px;
         font-weight: 300;
         padding: 5px;
         border: 1px solid #fff;
+
+        /* Escritorio */
+        @media only screen and (min-width: 1000px) {
+          display: none;
+        }
       }
     }
   }
 }
 
-/* Reducir al mínimo las alturas de los textos */
-h1,h2,h4{
-  margin: 0;
-  padding: 0;
-  line-height: 1;
+/* main */
+main{
+  text-align: center;
+}
+.main__tiendas {
+  display: none;
+  /* Escritorio */
+  @media only screen and (min-width: 1000px) {
+    display: inline-block;
+    color: #9a9a9a;
+    border: 1px solid #9a9a9a;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 5px;
+    margin: 20px 0;
+  }
 }
